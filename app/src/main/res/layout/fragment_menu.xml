@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MenuFragment">
+
+
+    <Button
+        android:id="@+id/button_webapi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WebAPI検証"/>
+
+    <Button
+        android:id="@+id/button_db"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DB検証"/>
+
+
+</LinearLayout>
