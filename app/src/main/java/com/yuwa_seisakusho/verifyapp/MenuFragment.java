@@ -50,6 +50,15 @@ public class MenuFragment extends Fragment {
             }
         });
 
+        // WebView検証ボタン押下時の処理
+        Button webViewButton = view.findViewById(R.id.button_webview);
+        webViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                WebViewFragment webViewFragment = new WebViewFragment();
+                activity.setFragment(webViewFragment);
+            }
+        });
 
         return view;
     }
