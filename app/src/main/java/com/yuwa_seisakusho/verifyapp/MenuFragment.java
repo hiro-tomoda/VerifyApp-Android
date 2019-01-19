@@ -60,6 +60,16 @@ public class MenuFragment extends Fragment {
             }
         });
 
+        // カレンダー検証ボタン押下時の処理
+        Button calendarButton = view.findViewById(R.id.button_calendar);
+        calendarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CalendarFragment calendarFragment = new CalendarFragment();
+                activity.setFragment(calendarFragment);
+            }
+        });
+
         return view;
     }
 

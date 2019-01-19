@@ -99,7 +99,7 @@ public class WebViewFragment extends Fragment {
                     public void onReceiveValue(String value) {
                         Log.d("TEST", value);
 
-                        // Javascriptからの戻り値にはダブルクォートとついているので、取り除く必要がある
+                        // Javascriptからの戻り値にはダブルクォートが付いているので、取り除く必要がある
                         value = value.substring(1, value.length()-1);
                         nativeText.setText(value);
                     }

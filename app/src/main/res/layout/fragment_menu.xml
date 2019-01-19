@@ -25,5 +25,10 @@
         android:layout_height="wrap_content"
         android:text="WebView検証"/>
 
+    <Button
+        android:id="@+id/button_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="カレンダー検証"/>
 
 </LinearLayout>
