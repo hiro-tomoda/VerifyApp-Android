@@ -70,6 +70,16 @@ public class MenuFragment extends Fragment {
             }
         });
 
+        // ボトムナビゲーション検証ボタン押下時の処理
+        Button bottomNavigationButton = view.findViewById(R.id.button_bottom_navigation);
+        bottomNavigationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomNavigationFragment bottomNavigationFragment = new BottomNavigationFragment();
+                activity.setFragment(bottomNavigationFragment);
+            }
+        });
+
         return view;
     }
 
