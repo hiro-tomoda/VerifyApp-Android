@@ -18,17 +18,30 @@ public class MainActivity extends AppCompatActivity {
 
         // メニュー画面を表示する
         MenuFragment menuFragment = new MenuFragment();
-        setFragment(menuFragment);
+        setFragment(menuFragment, false);
     }
 
     /**
      * フラグメントをフレームにセット
      */
-    public void setFragment(Fragment fragment) {
+    public void setFragment(Fragment fragment, boolean isBackStack) {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.replace(R.id.main_frame, fragment);
+        if (isBackStack) {
+            // フラグメントの状態をバックスタックに登録する
+            // メニュー画面でバックキーが押された場合はアプリ終了、それ以外の画面では前画面に戻るようにするため
+            transaction.addToBackStack(null);
+        }
         transaction.commit();
     }
 
+
+    /**
+     * バックキーが押された場合の処理
+     */
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

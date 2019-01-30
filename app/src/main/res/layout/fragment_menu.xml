@@ -6,6 +6,11 @@
     android:orientation="vertical"
     tools:context=".MenuFragment">
 
+    <Button
+        android:id="@+id/button_ui_parts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UI部品検証"/>
 
     <Button
         android:id="@+id/button_webapi"
@@ -36,5 +41,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ボトムナビゲーション検証"/>
+
+    <Button
+        android:id="@+id/button_preference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="プリファレンス検証"/>
 
 </LinearLayout>

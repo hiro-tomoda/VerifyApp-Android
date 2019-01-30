@@ -20,7 +20,6 @@ public class MenuFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,13 +29,23 @@ public class MenuFragment extends Fragment {
         // レイアウトファイルからビューオブジェクトを生成
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
 
+        // UI部品検証ボタン押下時の処理
+        Button uiPartsButton = view.findViewById(R.id.button_ui_parts);
+        uiPartsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UiPartsFragment uiPartsFragment = new UiPartsFragment();
+                activity.setFragment(uiPartsFragment, true);
+            }
+        });
+
         // WebAPI検証ボタン押下時の処理
         Button webApiButton = view.findViewById(R.id.button_webapi);
         webApiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 WebApiFragment webApiFragment = new WebApiFragment();
-                activity.setFragment(webApiFragment);
+                activity.setFragment(webApiFragment, true);
             }
         });
 
@@ -46,7 +55,7 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 DbFragment dbFragment = new DbFragment();
-                activity.setFragment(dbFragment);
+                activity.setFragment(dbFragment, true);
             }
         });
 
@@ -56,7 +65,7 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 WebViewFragment webViewFragment = new WebViewFragment();
-                activity.setFragment(webViewFragment);
+                activity.setFragment(webViewFragment, true);
             }
         });
 
@@ -66,7 +75,7 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 CalendarFragment calendarFragment = new CalendarFragment();
-                activity.setFragment(calendarFragment);
+                activity.setFragment(calendarFragment, true);
             }
         });
 
@@ -76,7 +85,17 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 BottomNavigationFragment bottomNavigationFragment = new BottomNavigationFragment();
-                activity.setFragment(bottomNavigationFragment);
+                activity.setFragment(bottomNavigationFragment, true);
+            }
+        });
+
+        // ボトムナビゲーション検証ボタン押下時の処理
+        Button preferenceButton = view.findViewById(R.id.button_preference);
+        preferenceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PreferenceFragment preferenceFragment = new PreferenceFragment();
+                activity.setFragment(preferenceFragment, true);
             }
         });
 

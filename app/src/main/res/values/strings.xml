@@ -9,4 +9,13 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+
+    <!-- スピナー -->
+    <string-array name="test">
+        <item>テスト1</item>
+        <item>テスト2</item>
+        <item>テスト3</item>
+    </string-array>
+
+
 </resources>
