@@ -99,6 +99,16 @@ public class MenuFragment extends Fragment {
             }
         });
 
+        // ログイン検証ボタン押下時の処理
+        Button loginButton = view.findViewById(R.id.button_login);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginFragment loginFragment = new LoginFragment();
+                activity.setFragment(loginFragment, true);
+            }
+        });
+
         return view;
     }
 

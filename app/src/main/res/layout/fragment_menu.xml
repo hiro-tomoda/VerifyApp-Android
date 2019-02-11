@@ -48,4 +48,10 @@
         android:layout_height="wrap_content"
         android:text="プリファレンス検証"/>
 
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ログイン検証"/>
+
 </LinearLayout>
